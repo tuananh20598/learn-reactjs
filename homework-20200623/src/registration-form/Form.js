@@ -271,7 +271,7 @@ class Form extends Component {
           </tbody>
         </table>
         <button type="submit" onClick={this.handleOnSubmit}>
-          Đăng kí
+          Đăng Ký
         </button>
       </div>
     );
