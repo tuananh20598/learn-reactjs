@@ -3,8 +3,8 @@ import React, { Component } from "react";
 import "./style.css";
 
 class Form extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       name: "",
       email: "",
@@ -22,73 +22,73 @@ class Form extends Component {
     };
   }
 
-  handleChangeName = (event) => {
+  handleOnChangeName = (event) => {
     this.setState({
       name: event.target.value,
     });
   };
 
-  handleChangeEmail = (event) => {
+  handleOnChangeEmail = (event) => {
     this.setState({
       email: event.target.value,
     });
   };
 
-  handleChangePass = (event) => {
+  handleOnChangePass = (event) => {
     this.setState({
       pass: event.target.value,
     });
   };
 
-  handleChangeAvatar = (event) => {
+  handleOnChangeAvatar = (event) => {
     this.setState({
       avatar: event.target.value,
     });
   };
 
-  handleChangePhone = (event) => {
+  handleOnChangePhone = (event) => {
     this.setState({
       phone: event.target.value,
     });
   };
 
-  handleChangeAge = (event) => {
+  handleOnChangeAge = (event) => {
     this.setState({
       age: event.target.value,
     });
   };
 
-  handleChangeGender = (event) => {
+  handleOnChangeGender = (event) => {
     this.setState({
       gender: event.target.value,
     });
   };
 
-  handleChangeNote = (event) => {
+  handleOnChangeNote = (event) => {
     this.setState({
       note: event.target.value,
     });
   };
 
-  handleChangeSoccer = (event) => {
+  handleOnChangeSoccer = (event) => {
     this.setState((prevState) => ({
       soccer: !prevState.soccer,
     }));
   };
 
-  handleChangeBadminton = (event) => {
+  handleOnChangeBadminton = (event) => {
     this.setState((prevState) => ({
       badminton: !prevState.badminton,
     }));
   };
 
-  handleChangeSailing = (event) => {
+  handleOnChangeSailing = (event) => {
     this.setState((prevState) => ({
       sailing: !prevState.sailing,
     }));
   };
 
-  handleSubmit = (event) => {
+  handleOnSubmit = (event) => {
     const favorites = {
       soccer: this.state.soccer,
       badminton: this.state.badminton,
@@ -134,70 +134,70 @@ class Form extends Component {
           <tbody>
             <tr>
               <td>
-                <label htmlFor="">Họ tên:</label>
+                <label>Họ tên:</label>
               </td>
               <td>
                 <input
                   type="text"
                   value={name}
-                  onChange={this.handleChangeName}
+                  onChange={this.handleOnChangeName}
                 />
               </td>
             </tr>
             <tr>
               <td>
-                <label htmlFor="">Email:</label>
+                <label>Email:</label>
               </td>
               <td>
                 <input
                   type="email"
                   value={email}
-                  onChange={this.handleChangeEmail}
+                  onChange={this.handleOnChangeEmail}
                 />
               </td>
             </tr>
             <tr>
               <td>
-                <label htmlFor="">Mật khẩu:</label>
+                <label>Mật khẩu:</label>
               </td>
               <td>
                 <input
                   type="password"
                   value={pass}
-                  onChange={this.handleChangePass}
+                  onChange={this.handleOnChangePass}
                 />
               </td>
             </tr>
             <tr>
               <td>
-                <label htmlFor="">Avatar:</label>
+                <label>Avatar:</label>
               </td>
               <td>
                 <input
                   type="file"
                   value={avatar}
-                  onChange={this.handleChangeAvatar}
+                  onChange={this.handleOnChangeAvatar}
                 />
               </td>
             </tr>
             <tr>
               <td>
-                <label htmlFor="">Số điện thoại:</label>
+                <label>Số điện thoại:</label>
               </td>
               <td>
                 <input
                   type="number"
                   value={phone}
-                  onChange={this.handleChangePhone}
+                  onChange={this.handleOnChangePhone}
                 />
               </td>
             </tr>
             <tr>
               <td>
-                <label htmlFor="">Tuổi:</label>
+                <label>Tuổi:</label>
               </td>
               <td>
-                <select value={age} onChange={this.handleChangeAge}>
+                <select value={age} onChange={this.handleOnChangeAge}>
                   <option value="1">1 tuổi</option>
                   <option value="2">2 tuổi</option>
                   <option value="3">3 tuổi</option>
@@ -207,14 +207,14 @@ class Form extends Component {
             </tr>
             <tr>
               <td>
-                <label htmlFor="">Giới tính:</label>
+                <label>Giới tính:</label>
               </td>
               <td>
                 <input
                   type="radio"
                   value="male"
                   checked={gender === "male"}
-                  onChange={this.handleChangeGender}
+                  onChange={this.handleOnChangeGender}
                 />
                 Nam
                 <br />
@@ -222,55 +222,55 @@ class Form extends Component {
                   type="radio"
                   value="female"
                   checked={gender === "female"}
-                  onChange={this.handleChangeGender}
+                  onChange={this.handleOnChangeGender}
                 />{" "}
                 Nữ
               </td>
             </tr>
             <tr>
               <td>
-                <label htmlFor="">Sở thích:</label>
+                <label>Sở thích:</label>
               </td>
               <td>
                 <input
                   type="checkbox"
                   value="soccer"
                   defaultChecked={favorite.soccer}
-                  onClick={this.handleChangeSoccer}
+                  onClick={this.handleOnChangeSoccer}
                 />{" "}
                 Đá bóng <br />
                 <input
                   type="checkbox"
                   value="badminton"
                   defaultChecked={favorite.badminton}
-                  onClick={this.handleChangeBadminton}
+                  onClick={this.handleOnChangeBadminton}
                 />{" "}
                 Cầu lông <br />
                 <input
                   type="checkbox"
                   value="sailing"
                   defaultChecked={favorite.sailing}
-                  onClick={this.handleChangeSailing}
+                  onClick={this.handleOnChangeSailing}
                 />{" "}
                 Đua thuyền
               </td>
             </tr>
             <tr>
               <td>
-                <label htmlFor="">Ghi chú:</label>
+                <label>Ghi chú:</label>
               </td>
               <td>
                 <textarea
                   rows="3"
                   cols="25"
                   value={note}
-                  onChange={this.handleChangeNote}
+                  onChange={this.handleOnChangeNote}
                 />
               </td>
             </tr>
           </tbody>
         </table>
-        <button type="submit" onClick={this.handleSubmit}>
+        <button type="submit" onClick={this.handleOnSubmit}>
           Đăng kí
         </button>
       </div>
