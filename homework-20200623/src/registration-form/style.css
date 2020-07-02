@@ -1,0 +1,25 @@
+.register {
+  margin-left: 300px;
+}
+.register h1 {
+  background-color: green;
+  color: white;
+  width: 700px;
+  height: 50px;
+  font-size: 30px;
+}
+.register table,
+.register td,
+.register tr,
+.register th {
+  border: 1px solid black;
+}
+
+.register table {
+  width: 700px;
+  height: 400px;
+}
+
+.register td {
+  padding-left: 10px;
+}
